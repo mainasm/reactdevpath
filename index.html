@@ -18,7 +18,12 @@
     const className = 'container'
     const props = {children, className}
     //const element = <div className = {className} children = {children}/>
-    const element = <div id ="app-root" {...props}/>
+    // const element = <div id ="app-root" {...props}/>
+
+    const element = <>//shorthand react fragment syntax
+        <span>Hello</span> <span>Reaction</span>
+        </>
+
     ReactDOM.render(element, rootElement);   
     
     //    const element = React.createElement('div', {
