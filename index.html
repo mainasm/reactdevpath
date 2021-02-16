@@ -9,29 +9,39 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="text/babel">
-    const rootElement = document.getElementById('root');
 
+    <div id="root"></div>
+
+    <script type="text/babel">
+    const Message = (props) => <div className="message">{props.children}</div>    
+    const element = (
+        <div className = "Container">
+            <Message>Hello World</Message>
+            <Message>Bye World</Message>
+        </div>       
+    ) 
+
+    console.log (<Message>Hellow World</Message>)
+    ReactDOM.render(element, document.getElementById ('root'))  
+  
     // Using JSX
-    const children = 'Hello React'
-    const className = 'container'
-    const props = {children, className}
-    //const element = <div className = {className} children = {children}/>
+    // const children = 'Hello React'
+    // const className = 'container'
+    // const props = {children, className}
+    // const element = <div className = {className} children = {children}/>
     // const element = <div id ="app-root" {...props}/>
 
-    const element = <>//shorthand react fragment syntax
-        <span>Hello</span> <span>Reaction</span>
-        </>
+    // const element = <>//shorthand react fragment syntax
+    //     <span>Hello</span> <span>Reaction</span>
+    //     </>
 
-    ReactDOM.render(element, rootElement);   
+    //  
     
-    //    const element = React.createElement('div', {
-    //    children: ['Hello World', 'Goodbye World'],
-    //    children: React.createElement('span', null, 'Hello', ' ','World' ),
-    //    className: 'container'
-    //    })
-    //    console.log(element);
+    // const element = React.createElement('div', {
+    // children: ['Hello World', 'Goodbye World'],
+    // children: React.createElement('span', null, 'Hello', ' ','World' ),
+    // className: 'container' })
+    // console.log(element);
           
  
     // const element = document.createElement('div');
